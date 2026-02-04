@@ -1,0 +1,20 @@
+class A {
+    A() {
+        System.out.println("Constructor of A");
+    }
+}
+
+class B extends A {
+    B() {
+        super();      // First call to super()
+        super();      //  Not allowed (Error)
+        System.out.println("Constructor of B");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        B obj = new B();
+    }
+}
+
